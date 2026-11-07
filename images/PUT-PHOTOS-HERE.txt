@@ -1,0 +1,25 @@
+PHOTOS GO IN THIS FOLDER
+=======================
+
+The site references these filenames. Drop licensed photography in here with
+exactly these names and it will appear automatically (each slot falls back to
+an elegant styled placeholder until the file exists).
+
+  hero.jpg         1600 x 2000  (portrait, subject sits right of centre)
+  about.jpg        1000 x 1250
+  gallery-01.jpg    900 x 1350
+  gallery-02.jpg    900 x 1150
+  gallery-03.jpg   1000 x 1000
+  gallery-04.jpg    900 x 1150
+  gallery-05.jpg    900 x 1350
+  gallery-06.jpg    900 x 1150
+  gallery-07.jpg   1400 x  900
+  gallery-08.jpg    900 x 1150
+  gallery-09.jpg   1000 x 1000
+
+Keep files under ~400 KB each (export at quality 80, sRGB) so the page stays
+quick. Add more shots by copying a <figure class="tile"> block in index.html
+and bumping the filename — the lightbox and counter pick it up automatically.
+
+Only use images you have written permission to publish. Photographs of an
+adult performer are almost always rights-managed.
