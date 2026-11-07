@@ -1,6 +1,10 @@
 PHOTOS GO IN THIS FOLDER
 =======================
 
+Not ready to sort them? Drop everything in incoming/ instead — any names, any
+order, any format — and the site keeps its placeholders until they are placed.
+See incoming/README.txt for how many and what shapes.
+
 The site references these filenames. Drop licensed photography in here with
 exactly these names and it will appear automatically (each slot falls back to
 an elegant styled placeholder until the file exists).
@@ -23,3 +27,20 @@ and bumping the filename — the lightbox and counter pick it up automatically.
 
 Only use images you have written permission to publish. Photographs of an
 adult performer are almost always rights-managed.
+
+WHERE TO GET THEM
+-----------------
+There is no free-licensed portrait of Adam Ramzi - not on Wikipedia, not on
+Wikimedia Commons. Every existing photo belongs to a studio, photographer or
+magazine. Do not just right-click one from Google Images; the site is public
+and that is a straightforward infringement.
+
+Ask him:        instagram.com/princejasmine_  (backup: @adamramzipants)
+                x.com/adamramzixxx
+Studio press:   Falcon / Raging Stallion promo stills via the Buddy Profits
+                affiliate program - affiliates get written usage rights.
+Press:          Instinct, AVN and Bay Area Reporter all ran portraits; ask the
+                editor for the shoot with credit.
+Licence:        the 2016 Hedwig red-carpet frame is rights-managed on Alamy.
+
+Log every photo's source, photographer and permission in ../CREDITS.md.
