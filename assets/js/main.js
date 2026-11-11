@@ -1,6 +1,6 @@
 /* =========================================================
-   Adam Ramzi — Fan Archive
-   Vanilla JS: gate, nav, reveals, image loading, lightbox, forms.
+   Daniel Joseph Levy — Fan Archive
+   Vanilla JS: nav, reveals, image loading, lightbox, forms.
    ========================================================= */
 (function () {
   "use strict";
@@ -21,52 +21,7 @@
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   /* ---------------------------------------------------------
-     1. Age gate
-     --------------------------------------------------------- */
-  var gate = d.getElementById("age-gate");
-  var GATE_KEY = "ar-age-verified";
-
-  function storeGate() {
-    try { sessionStorage.setItem(GATE_KEY, "1"); } catch (e) { /* private mode */ }
-  }
-  function gatePassed() {
-    try { return sessionStorage.getItem(GATE_KEY) === "1"; } catch (e) { return false; }
-  }
-
-  function openGate() {
-    if (!gate) return;
-    gate.hidden = false;
-    gate.classList.remove("is-hidden");
-    d.body.classList.add("is-locked");
-    var btn = gate.querySelector("[data-gate-accept]");
-    if (btn) btn.focus();
-  }
-
-  function closeGate() {
-    if (!gate) return;
-    storeGate();
-    gate.classList.add("is-hidden");
-    d.body.classList.remove("is-locked");
-    window.setTimeout(function () { gate.hidden = true; }, 520);
-  }
-
-  if (gate) {
-    if (gatePassed()) {
-      gate.classList.add("is-hidden");
-      gate.hidden = true;
-    } else {
-      openGate();
-    }
-    gate.addEventListener("click", function (e) {
-      if (e.target.closest("[data-gate-accept]")) closeGate();
-    });
-    d.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && !gate.hidden) closeGate();
-    });
-  }
-
-  /* ---------------------------------------------------------
-     2. Header state + mobile nav
+     1. Header state + mobile nav
      --------------------------------------------------------- */
   var header = d.getElementById("site-header");
   var nav = d.getElementById("primary-nav");

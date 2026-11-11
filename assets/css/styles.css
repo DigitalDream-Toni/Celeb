@@ -252,73 +252,6 @@ ul { margin: 0; padding: 0; list-style: none; }
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-/* ---------- 7. Age gate ---------- */
-.gate {
-  position: fixed;
-  inset: 0;
-  z-index: 300;
-  display: grid;
-  place-items: center;
-  padding: 24px;
-  background:
-    radial-gradient(70% 60% at 50% 0%, rgba(199, 167, 106, .12), transparent 70%),
-    rgba(6, 6, 8, .96);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  transition: opacity .5s var(--ease), visibility .5s var(--ease);
-}
-.gate.is-hidden { opacity: 0; visibility: hidden; }
-
-.gate__inner {
-  width: min(560px, 100%);
-  padding: clamp(34px, 6vw, 60px);
-  border: 1px solid var(--line);
-  background: rgba(12, 12, 15, .9);
-  text-align: center;
-  animation: gateIn .7s var(--ease) both;
-}
-
-@keyframes gateIn {
-  from { opacity: 0; transform: translateY(18px); }
-  to   { opacity: 1; transform: none; }
-}
-
-.gate__eyebrow {
-  font-size: 10px;
-  letter-spacing: .34em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 20px;
-}
-
-.gate__title {
-  font-family: var(--font-display);
-  font-size: clamp(1.6rem, 4vw, 2.2rem);
-  line-height: 1.15;
-  margin-bottom: 18px;
-}
-
-.gate__copy {
-  font-size: .9rem;
-  line-height: 1.85;
-  color: var(--muted);
-  margin-bottom: 30px;
-}
-
-.gate__actions {
-  display: grid;
-  gap: 14px;
-  justify-items: center;
-}
-.gate__actions .btn { width: 100%; max-width: 340px; }
-
-.gate__fine {
-  margin-top: 26px;
-  font-size: 10.5px;
-  letter-spacing: .04em;
-  color: rgba(139, 135, 127, .75);
-}
-
 /* ---------- 8. Header ---------- */
 .site-header {
   position: fixed;
@@ -489,6 +422,17 @@ ul { margin: 0; padding: 0; list-style: none; }
   margin-block: 0 26px;
 }
 .hero__title span { display: block; }
+.hero__given {
+  font-family: var(--font-body);
+  font-size: clamp(.68rem, 1vw, .82rem);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: .4em;
+  text-transform: uppercase;
+  color: var(--paper-dim);
+  margin-bottom: clamp(10px, 1.6vw, 18px);
+  padding-left: 4px;
+}
 .hero__title-line {
   font-style: italic;
   color: var(--gold-soft);
@@ -640,12 +584,86 @@ ul { margin: 0; padding: 0; list-style: none; }
   margin-top: 40px;
 }
 
+/* ---------- 11b. Selected work ---------- */
+.work { background: var(--ink); }
+.work__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  margin-top: clamp(34px, 5vw, 56px);
+  background: var(--line-soft);
+  border: 1px solid var(--line-soft);
+}
+.work__card {
+  position: relative;
+  padding: clamp(22px, 2.6vw, 32px) clamp(20px, 2.4vw, 28px) clamp(26px, 3vw, 34px);
+  background: var(--ink);
+  transition: background .4s var(--ease);
+}
+.work__card:hover { background: #0d0d10; }
+.work__year {
+  font-size: 9.5px;
+  letter-spacing: .26em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.work__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.32rem, 2vw, 1.62rem);
+  line-height: 1.15;
+  margin: 14px 0 10px;
+}
+.work__title em { font-style: italic; color: var(--gold-soft); }
+.work__role {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--paper-dim);
+}
+.work__meta {
+  margin-top: 16px;
+  font-size: 9.5px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ---------- 11c. Timeline ---------- */
+.timeline {
+  margin: 34px 0 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line-soft);
+  max-width: 46ch;
+}
+.timeline li {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 14px;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+.timeline__year {
+  font-size: 9.5px;
+  letter-spacing: .18em;
+  color: var(--gold);
+  padding-top: 3px;
+}
+.timeline__what {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--paper-dim);
+}
+
 /* ---------- 12. Gallery ---------- */
 .gallery { background: linear-gradient(180deg, var(--ink), #060608); }
 
+/* Two press frames share one baseline: a square and a 3:2 sit side by side
+   at 2fr / 3fr, so their heights match exactly without cropping. */
 .gallery__grid {
-  columns: 3;
-  column-gap: clamp(12px, 1.6vw, 20px);
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  align-items: start;
+  gap: clamp(12px, 1.6vw, 20px);
 }
 
 .tile {
@@ -847,6 +865,14 @@ ul { margin: 0; padding: 0; list-style: none; }
 .card--feature { background: linear-gradient(180deg, #14121a, #0d0d10 55%); }
 
 .card__head { margin-bottom: 30px; }
+
+.card__body {
+  display: grid;
+  gap: 16px;
+  margin-top: 22px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line-soft);
+}
 
 .card__kicker {
   font-size: 9.5px;
@@ -1172,8 +1198,8 @@ a.rep__value:hover { color: var(--gold); border-color: var(--gold); }
 
 /* ---------- 18. Responsive ---------- */
 @media (max-width: 1024px) {
-  .gallery__grid { columns: 2; }
   .about__grid { grid-template-columns: 1fr; gap: 40px; }
+  .work__grid { grid-template-columns: repeat(2, 1fr); }
   .about__media { max-width: 480px; }
   .section__head { grid-template-columns: 1fr; align-items: start; gap: 22px; }
   .contact__grid { grid-template-columns: 1fr; }
@@ -1197,6 +1223,7 @@ a.rep__value:hover { color: var(--gold); border-color: var(--gold); }
   .hero__media { height: 46svh; min-height: 280px; }
   .hero__media::after { inset: 10px -10px -10px 10px; }
   .hero__title { font-size: clamp(2.9rem, 11.5vw, 5.6rem); }
+  .gallery__grid { grid-template-columns: 1fr; }
 }
 
 /* Touch devices never hover, so captions stay visible there. */
@@ -1248,8 +1275,8 @@ a.rep__value:hover { color: var(--gold); border-color: var(--gold); }
 @media (max-width: 640px) {
   body { font-size: 15px; }
 
-  .gallery__grid { columns: 1; }
-  .tile, .tile--tall, .tile--square, .tile--wide { aspect-ratio: 4 / 5; }
+  .work__grid { grid-template-columns: 1fr; }
+  .timeline li { grid-template-columns: 62px 1fr; }
 
   .facts__grid { grid-template-columns: 1fr; }
   .fact { border-left: 0; padding-left: 0; }
