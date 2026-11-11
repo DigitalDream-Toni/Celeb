@@ -60,7 +60,7 @@ Every image is a press frame from **Wikimedia Commons**, free-licensed and credi
 | File | Frame | Photographer | Licence |
 |---|---|---|---|
 | `hero.jpg` | Solo portrait, TIFF 2025 | Patrick.suechan | CC BY-SA 4.0 |
-| `about.jpg` | Solo portrait (alt crop), TIFF 2025 | Patrick.suechan | CC BY-SA 4.0 |
+| `about.jpg` | Three-quarter portrait, TIFF 2025 | Patrick.suechan | CC BY-SA 4.0 |
 | `press-02.jpg` | With Sarah McLachlan, TIFF 2025 | Patrick.suechan | CC BY-SA 4.0 |
 | `press-03.jpg` | Producers' row, TIFF 2025 | Patrick.suechan | CC BY-SA 4.0 |
 

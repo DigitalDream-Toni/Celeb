@@ -65,7 +65,7 @@
      3. Scroll spy — highlight the section you're reading
      --------------------------------------------------------- */
   var navLinks = nav ? Array.prototype.slice.call(nav.querySelectorAll("a")) : [];
-  var sections = ["about", "gallery", "contact"]
+  var sections = ["about", "work", "press", "contact"]
     .map(function (id) { return d.getElementById(id); })
     .filter(Boolean);
 
@@ -310,7 +310,7 @@
         .catch(function () {
           if (status) {
             status.textContent =
-              "That didn’t send. Please try again, or email fanmail@adamramzi.com directly.";
+              "That didn’t send. Please try again in a moment.";
           }
         })
         .then(function () {
@@ -323,13 +323,7 @@
   handleForm(
     d.getElementById("fanmail-form"),
     CONFIG.formEndpoint,
-    "Thank you — your message is with Adam. He replies when he’s off set, so give it a few weeks."
-  );
-
-  handleForm(
-    d.getElementById("booking-form"),
-    CONFIG.formEndpoint,
-    "Received. Marlowe & Co. will reply within two business days."
+    "Thanks — the form works, but this draft isn’t connected to an inbox yet, so nothing was delivered."
   );
 
   /* Newsletter: inline validation only */
