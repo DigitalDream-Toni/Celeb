@@ -1,143 +1,125 @@
-# Adam Ramzi — Fan Archive
+# Daniel Joseph Levy — Fan Archive
 
-A single-page fan site: age gate, editorial hero, about, lightbox gallery, and two
-contact routes (fan mail direct to Adam, bookings/press to his management).
+An independent, non-commercial fan site for **Daniel Joseph Levy** (b. 9 August 1983, Toronto) —
+the actor, writer, director and producer known for *Schitt's Creek*, *Good Grief* and
+*The Big Brunch*.
 
-Built with plain HTML, CSS and JavaScript — no build step, no dependencies.
+Plain **HTML + CSS + JavaScript**. No framework, no build step, no dependencies.
 
-```
-index.html
-assets/css/styles.css
-assets/js/main.js
-images/                    ← drop licensed photography here
-```
+---
 
-## Running it
-
-Open `index.html` in a browser, or serve the folder:
+## Run it
 
 ```bash
-python -m http.server 8000   # then visit http://localhost:8000
+python -m http.server 8010 --bind 127.0.0.1
+# then open http://127.0.0.1:8010/index.html
 ```
 
-## What to replace before this goes live
+Any static server works. Opening `index.html` from the filesystem also renders, but fonts and the
+relative asset paths behave better over HTTP.
 
-Everything below is **sample content** so the layout reads as finished. Replace it
-with confirmed facts — publishing invented credits or contact details about a real
-person is both misleading and a legal risk.
+---
 
-| Where | What's placeholder |
-| --- | --- |
-| `index.html` → `#about` bio | The biography paragraphs and pull quote (see *Confirmed facts* below) |
-| `index.html` → facts strip | Based in, "on camera since" year, agency name |
-| `index.html` → gallery captions | Titles, cities, years |
-| `index.html` → management card | Marlowe & Co. name, emails, phone, hours |
-| `index.html` → footer | Social links point at instagram.com / x.com / youtube.com |
-| `images/` | All photography |
+## Structure
 
-## Confirmed facts (verified Nov 2026)
-
-Sourced from Wikipedia, TMDB and the 2018 Instinct interview — usable as-is, unlike
-the rest of the placeholder copy:
-
-- Born 17 November 1981, Los Angeles; grew up in east Los Angeles County.
-- Armenian-American; born Aram (Levon) Kirakosian; performs as Adam Ramzi.
-- Adult career began in 2013, after Raging Stallion president Chris Ward contacted
-  him while he was in graduate school for psychology. He has also practised as a
-  licensed psychologist.
-- Played bass on Io Echo's 2013 debut *Ministry of Love*.
-- Played Vardan in the web series *EastSiders* (2012–17).
-- Live show with Kurtis Wolfe at San Francisco's Nob Hill Theatre, 2018; featured in
-  the 2023 documentary *Stories Untold: Meet Queer SWANA Sex Workers and Drag
-  Performers*.
-- Won the 2019 GayVN Fan Award for Favorite Daddy.
-
-**Still fictional in this build:** the agency name "Marlowe & Co.", all email
-addresses, the phone number and the office hours. No public booking agency for him
-is documented, so that card must be replaced with real representation or removed
-before the site is published.
-
-## Photos
-
-`images/` contains a text file listing the exact filenames and dimensions the page
-expects. Any missing file simply leaves the styled placeholder in place, so the site
-never looks broken. Use only images you have permission to publish, and credit the
-photographer in the gallery note and footer.
-
-**Current set: 10 of 11 slots filled.** Ten frames of Adam Ramzi, credited to
-Ryan Edward Scott (the credit line is burned into one frame), sourced from his
-Instagram at 770 px. `gallery-09` is still an empty frame. Because these are
-tight chest-up portraits, the hero uses a framed panel beside the headline
-rather than a full-bleed backdrop — type over a close-up face read badly.
-
-**Unsorted photos go in `images/incoming/`.** Drop them with any names, in any
-order, jpg/png/webp, and they stay off the page until they are cropped into the
-11 slots (1 hero, 1 about portrait, 9 gallery). 11 files fills every slot; 15–20
-gives enough choice to match shots to the tall/square/wide tiles. See
-`images/incoming/README.txt` for the slot shapes.
-
-### Where real photos can come from
-
-There is no free-licensed portrait of Adam Ramzi (no Wikipedia image, nothing on
-Wikimedia Commons). Every existing photograph is owned by a studio, a photographer
-or a press outlet, so copying one off the web into this site is a copyright problem
-and, for studio content, also a licensing one. Legitimate routes, roughly in order
-of how easy they are:
-
-1. **Ask him.** His own accounts are the source of the images on this page's ideal
-   build: Instagram `@princejasmine_` (backup `@adamramzipants`), X `@adamramzixxx`.
-   A short DM asking to use specific posts, with credit, is how most fan archives
-   actually get their images. Keep the reply.
-2. **Embed instead of copy.** Instagram's own embed (Share → Embed, which loads
-   their script) shows a public post without you hosting the file. Nothing is
-   copied, so nothing is infringed — but it needs a public post and it will not
-   work for restricted accounts.
-3. **Studio press material.** Falcon / Raging Stallion distribute official promo
-   stills to affiliates through Buddy Profits (`affiliates@buddyprofits.com`);
-   affiliates get written usage rights for the images. Adult affiliate programs
-   are the normal route for performer sites.
-4. **Press / editorial.** Interviews that ran portraits (Instinct, AVN, Bay Area
-   Reporter) — email the editor and ask for the shoot, credited. Most say yes for
-   fan coverage; few say yes to a copy of the file with no credit.
-5. **License a stock frame.** The 2016 Hedwig red-carpet photo is on Alamy as a
-   rights-managed image — buy the individual licence if you want one editorial shot.
-
-Whatever you land, keep a `CREDITS.md` note with the source URL, photographer, date
-and the permission you were given. That file is your defence if anyone complains.
-
-## Wiring up the forms
-
-There is no backend. Forms validate in the browser and then show a success state.
-To deliver real messages, set an endpoint at the top of `assets/js/main.js`:
-
-```js
-var CONFIG = {
-  formEndpoint: "https://formspree.io/f/your-id",   // fan mail + bookings
-  newsletterEndpoint: ""                            // optional newsletter handler
-};
+```
+index.html              the whole page
+assets/css/styles.css   design system + all layout
+assets/js/main.js       nav, scroll reveals, lightbox, form validation
+images/                 the four images the page actually uses
+CREDITS.md              per-image attribution and licence
+images/incoming/        working folder: Commons sources, archived material
 ```
 
-Submissions are POSTed as JSON to that URL. If you point both contact forms at the
-same endpoint, add a hidden field (or use the `type` value) to route fan mail and
-booking enquiries to different inboxes. For a fully static host, Netlify Forms is
-an alternative — add `data-netlify="true"` and a `name` to each `<form>` and remove
-the `preventDefault()` path in `main.js`.
+### Sections (and their anchor ids)
 
-## Notes on compliance
+| # | Section | id |
+|---|---|---|
+| — | Hero | `#top` |
+| 01 | About + timeline | `#about` |
+| 02 | Selected work — nine credit cards | `#work` |
+| 03 | Press frames — two photographs | `#press` |
+| 04 | Contact — fan mail and representation | `#contact` / `#bookings` |
+| — | Newsletter block | — |
 
-- **18+ gate** is shown once per browser session (`sessionStorage`), not per page.
-  It is a courtesy gate, not age verification — if you need real verification,
-  that requires a vendor.
-- **No explicit imagery** is included; the gallery is portrait/editorial only.
-- The footer states plainly that this is an **unofficial fan site**, not affiliated
-  with Adam Ramzi, his management, or any studio, and includes a removal contact.
-  Keep that block — it is what separates a fan site from an impersonation.
-- If you publish U.S. content depicting sexually explicit conduct, 18 U.S.C. § 2257
-  record-keeping requirements apply to the producer, not to a fan site linking out —
-  but confirm with a lawyer before hosting anything beyond editorial portraits.
+### Design notes
 
-## Accessibility & performance
+- Dark editorial palette: ink `#08080a`, paper `#f5f2ec`, gold `#c7a76a`; Playfair Display for
+  display type, Inter for text; film-grain overlay; scroll reveals.
+- The hero is a **framed portrait panel beside the masthead**, not a full-bleed backdrop — the
+  headline sits on ink, the photograph keeps its own light.
+- The two press frames sit on a `2fr / 3fr` grid, so a square and a 3:2 share exactly the same
+  height without either being cropped.
 
-Semantic landmarks, keyboard-operable gallery (Enter/Space to open, arrows to move,
-Esc to close, focus trapped in the viewer), visible focus rings, `aria-live` form
-status, lazy-loaded gallery images, and full `prefers-reduced-motion` support.
+---
+
+## Photography
+
+Every image is a press frame from **Wikimedia Commons**, free-licensed and credited on the page:
+
+| File | Frame | Photographer | Licence |
+|---|---|---|---|
+| `hero.jpg` | Solo portrait, TIFF 2025 | Patrick.suechan | CC BY-SA 4.0 |
+| `about.jpg` | Solo portrait (alt crop), TIFF 2025 | Patrick.suechan | CC BY-SA 4.0 |
+| `press-02.jpg` | With Sarah McLachlan, TIFF 2025 | Patrick.suechan | CC BY-SA 4.0 |
+| `press-03.jpg` | Producers' row, TIFF 2025 | Patrick.suechan | CC BY-SA 4.0 |
+
+Full attribution, source URLs and the list of modifications are in **`CREDITS.md`**. The crops are
+adaptations, so they carry the same **CC BY-SA 4.0** licence — that credit line in the footer must
+stay on the page. Original uploads are kept in `images/incoming/_commons/`.
+
+There are only a handful of free-licensed photographs of him, which is why the page leans on
+typography and a nine-card work grid rather than a large gallery.
+
+**Do not add photographs of anyone else**, and do not reuse the old Adam Ramzi frames still sitting
+in `images/incoming/_archive-adam-ramzi/` — they are a different person and a different
+photographer's shoot.
+
+---
+
+## Contact block — what is real and what is not
+
+Real, and linked on the page:
+
+- Representation: **CAA** (he signed with them in March 2025 — Deadline).
+- Speaking/appearance enquiries: **CAA Speakers**, `speakers@caa.com`, via
+  `caa.com/caaspeakers/daniel-levy/`.
+- Production banner: **Not A Real Production Company** (founded 2022).
+- Social: `@instadanjlevy` (Instagram), `@danjlevy` (X, TikTok), IMDb `nm2391794`.
+
+Not real yet — replace before publishing:
+
+- `corrections@example.com` in the footer legal block is a placeholder.
+- The fan-mail form and the newsletter form validate input but post nowhere. Point
+  `CONFIG.formEndpoint` / `CONFIG.newsletterEndpoint` at a real handler in `assets/js/main.js`, or
+  delete the forms. The page says so in the footer, so keep that line accurate if you wire them up.
+
+There is no public fan-mail address and no agency that forwards letters; the page says that plainly
+rather than inventing one.
+
+---
+
+## Facts and where they came from
+
+- Born 9 Aug 1983, Toronto; son of Eugene Levy and Deborah Divine; sister Sarah Levy — Wikipedia /
+  Canadian Encyclopedia.
+- MTV Canada from 2006 (*MTV Live*, *The After Show*) — Canadian Encyclopedia.
+- *Schitt's Creek* 2015–2020, co-created with Eugene Levy; final season took nine Primetime Emmys,
+  four of them to Levy in one night (acting, writing, directing, producing) — CBC, Television Academy.
+- *The Big Brunch* (Max, 2022) — created, hosted, judged.
+- *Good Grief* — wrote, directed, produced, starred; limited release 29 Dec 2023, Netflix 5 Jan 2024.
+- Member of the Order of Canada, June 2023 — Governor General's appointments list.
+- CAA signing, March 2025 — Deadline. First-look TV deal with Netflix, 2026.
+
+If a date or role changes, update the matching `work__card` in `index.html` and keep `work__meta`
+to platform + form (series/feature).
+
+---
+
+## Known limits
+
+- Four photographs, one photographer, one event (plus two crops of a single moment). The page is
+  built to look intentional at that scale; adding more frames means reworking `#press`.
+- Screenshots of the local preview render at roughly 1.35× and get cropped, so layout was verified
+  by DOM measurement as well as by eye.
+- No analytics, no cookies, no tracking. Nothing is stored client-side.

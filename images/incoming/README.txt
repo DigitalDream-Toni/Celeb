@@ -1,53 +1,39 @@
-DROP YOUR PHOTOS IN THIS FOLDER
-===============================
+IMAGES / INCOMING — working folder
+==================================
 
-Any file names. Any order. jpg, png or webp. No resizing, no renaming, no
-cropping — that is my job. Nothing in this folder is shown on the site, so it
-can look as messy as you like and the live page stays clean.
+Nothing in this folder is served by the site. The page uses exactly four files from
+images/ : hero.jpg, about.jpg, press-02.jpg, press-03.jpg.
 
-HOW MANY I NEED
----------------
-The page has 11 photo slots, so 11 files is the minimum that fills every slot:
+_commons/
+    The downloaded Wikimedia Commons sources (1280–1920 px on the long edge) that the
+    four site images were cropped from. Free-licensed — see ../CREDITS.md.
 
-    hero.jpg           1 portrait, tall      (ideal 1600 x 2000, 4:5 / 2:3)
-    about.jpg          1 portrait            (ideal 1000 x 1250, 4:5)
-    gallery-01.jpg     tall                  (ideal  900 x 1350, 2:3)
-    gallery-02.jpg     portrait              (ideal  900 x 1150, 4:5)
-    gallery-03.jpg     square                (ideal 1000 x 1000, 1:1)
-    gallery-04.jpg     portrait              (ideal  900 x 1150, 4:5)
-    gallery-05.jpg     tall                  (ideal  900 x 1350, 2:3)
-    gallery-06.jpg     portrait              (ideal  900 x 1150, 4:5)
-    gallery-07.jpg     landscape             (ideal 1400 x  900, wide)
-    gallery-08.jpg     portrait              (ideal  900 x 1150, 4:5)
-    gallery-09.jpg     square                (ideal 1000 x 1000, 1:1)
+_archive-adam-ramzi/
+    An earlier, unrelated set of photographs of a different person, from an earlier
+    version of this project. Do NOT use these on this site. Safe to delete.
 
-Give me 15-20 if you have them. More choice means I can match the strongest
-shots to the tall/square/wide slots instead of forcing the wrong crop, and drop
-the weaker duplicates.
 
-WHAT MAKES A GOOD SET
----------------------
-  - A mix: at least 4 upright portraits, 2 square-ish, 1-2 landscape.
-  - The hero needs one clean, calm frame with space around the head and
-    shoulders — it sits half behind a headline, so busy backgrounds fight it.
-  - Faces near the centre of the frame. The gallery crops hard, and anything
-    at the edges gets cut.
-  - Straight-on, non-explicit frames only for this build. The gallery is
-    portrait/editorial, deliberately.
-  - Highest resolution you have. I downscale; I cannot invent detail.
+ADDING MORE PHOTOGRAPHS
+-----------------------
+Only add images you have the right to publish:
 
-FROM A PHONE
-------------
-iPhone HEIC files need exporting as JPEG first (Photos → Share → Copy, or set
-Camera → Formats → Most Compatible). Straight .heic will not open in a browser.
+  1. Your own photographs, or
+  2. Free-licensed ones (Wikimedia Commons, Flickr CC), keeping the photographer's name,
+     licence and source URL so they can go in CREDITS.md, or
+  3. Press frames you have written permission to use.
 
-BEFORE YOU DROP THEM
---------------------
-Only images you have the right to publish. See ../PUT-PHOTOS-HERE.txt for where
-to get licensed shots, and log each one in ../../CREDITS.md.
+Do not add frames of a different person and do not caption a photograph as Levy unless
+it is him.
 
-WHEN YOU ARE DONE
------------------
-Tell me how many you added and I will crop, resize, name and wire them into the
-slots above, then check them in the preview. I will also clear this folder out
-afterwards so the originals do not end up in a published build.
+Slot shapes currently used by the page:
+
+  hero.jpg       4:5 portrait    1000 x 1250
+  about.jpg      4:5 portrait    1000 x 1250
+  press-02.jpg   1:1 square       900 x 900
+  press-03.jpg   3:2 landscape   1200 x 800
+
+Drop new files here first; they will be cropped, resized and wired in, then listed in
+CREDITS.md and in the footer credit line.
+
+Format: JPEG or PNG. HEIC from an iPhone needs converting first (Photos > Export, or
+`heif-convert`), since browsers will not display it.

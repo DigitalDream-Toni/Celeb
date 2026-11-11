@@ -1,49 +1,30 @@
-# Image credits & permissions
+# Image credits
 
-Every file in `images/` has a row here. Keep the permission evidence (the DM
-screenshot, the email, the licence receipt) alongside it.
+All photographs on this site come from Wikimedia Commons under free licences. Attribution is
+required by those licences and appears in the page footer and beside the press frames; the credit
+lines must stay with the images if they are reused.
 
-## Current set — 10 frames, source: Instagram (770 px squares)
+| File | What it shows | Photographer | Licence | Source |
+|---|---|---|---|---|
+| `images/hero.jpg` | Solo portrait, TIFF 2025 (cropped) | Patrick.suechan | CC BY-SA 4.0 | [File:Dan Levy at the 2025 Toronto International Film Festival 02 (cropped 2).jpg](https://commons.wikimedia.org/wiki/File:Dan_Levy_at_the_2025_Toronto_International_Film_Festival_02_(cropped_2).jpg) |
+| `images/about.jpg` | Solo portrait, alt crop, TIFF 2025 | Patrick.suechan | CC BY-SA 4.0 | [File:Dan Levy at the 2025 Toronto International Film Festival 02 (cropped).jpg](https://commons.wikimedia.org/wiki/File:Dan_Levy_at_the_2025_Toronto_International_Film_Festival_02_(cropped).jpg) |
+| `images/press-02.jpg` | With Sarah McLachlan, TIFF 2025 | Patrick.suechan | CC BY-SA 4.0 | [File:Sarah McLachlan, Dan Levy, and Kate O'Keefe at the 2025 Toronto International Film Festival.jpg](https://commons.wikimedia.org/wiki/File:Sarah_McLachlan,_Dan_Levy,_and_Kate_O%27Keefe_at_the_2025_Toronto_International_Film_Festival.jpg) |
+| `images/press-03.jpg` | Producers' row, TIFF 2025 | Patrick.suechan | CC BY-SA 4.0 | [File:Nicholas Ferrall, Ally Pankiw, Cassidy Hartmann, Dan Levy and Jeanne Elfant Festa at the 2025 Toronto International Film Festival.jpg](https://commons.wikimedia.org/wiki/File:Nicholas_Ferrall,_Ally_Pankiw,_Cassidy_Hartmann,_Dan_Levy_and_Jeanne_Elfant_Festa_at_the_2025_Toronto_International_Film_Festival.jpg) |
 
-The credit **Ryan Edward Scott** is taken from the watermark burned into one
-frame (`gallery-03.jpg`: *"ADAM RAMZI BY RYAN EDWARD SCOTT FOR SUMMER DIARY"*),
-which matches a 2015 Flickr post credited to him. That is evidence for that one
-image; confirm the rest per frame before publishing.
+## Modifications
 
-| File | Photographer / owner | Source | Licence or permission | Date cleared |
-| --- | --- | --- | --- | --- |
-| hero.jpg | Ryan Edward Scott (assumed) | Instagram — @princejasmine_ | **Not documented — request in writing** | |
-| about.jpg | Ryan Edward Scott (assumed) | Instagram — @princejasmine_ | **Not documented — request in writing** | |
-| gallery-01.jpg | Ryan Edward Scott (assumed) | Instagram — @princejasmine_ | **Not documented** | |
-| gallery-02.jpg | Ryan Edward Scott (assumed) | Instagram — @princejasmine_ | **Not documented** | |
-| gallery-03.jpg | Ryan Edward Scott | watermarked credit line | **Not documented** | |
-| gallery-04.jpg | Ryan Edward Scott (assumed) | Instagram — @princejasmine_ | **Not documented** | |
-| gallery-05.jpg | Ryan Edward Scott (assumed) | Instagram — @princejasmine_ | **Not documented** | |
-| gallery-06.jpg | Ryan Edward Scott (assumed) | Instagram — @princejasmine_ | **Not documented** | |
-| gallery-07.jpg | Ryan Edward Scott (assumed) | Instagram — @princejasmine_ | **Not documented** | |
-| gallery-08.jpg | Ryan Edward Scott (assumed) | Instagram — @princejasmine_ | **Not documented** | |
-| gallery-09.jpg | — | — | slot still empty | |
+- `hero.jpg` — cropped to 4:5, resized to 1000 × 1250, re-encoded JPEG (quality 85, progressive).
+- `about.jpg` — cropped to 4:5, resized to 1000 × 1250, re-encoded JPEG.
+- `press-02.jpg` — cropped to a square centred on Sarah McLachlan and Levy (Kate O'Keefe falls
+  outside the crop), resized to 900 × 900, re-encoded JPEG.
+- `press-03.jpg` — full frame, resized to 1200 × 800, re-encoded JPEG.
 
-**Status: not cleared for publication.** Fan use is not a licence. Before the
-site goes live, get a written yes from the photographer (or the studio, if the
-frames came from a studio shoot) and replace "assumed" with the real name.
+Under **CC BY-SA 4.0**, cropped versions count as adaptations, so these files are distributed under
+the same licence. Copyright in the underlying photographs remains with the photographer; this site
+claims no ownership and makes no commercial use.
 
-## Source resolution
+## Unused sources
 
-The originals are 770 px on the long edge, which is enough for the gallery tiles
-but soft for the hero on a high-DPI screen. If better files turn up (1500 px+),
-replace them in the 11 slots and keep the same filenames.
-
-## Rules of thumb
-
-- "It's on Google Images" is not a licence. Neither is "everyone reposts it".
-- Credit is not permission, and permission is not credit — get both.
-- Studio stills come with affiliate usage terms; read them, they usually forbid
-  use outside promoting that studio's titles.
-- If a photographer says yes, ask them how they want to be credited and put that
-  exact wording in `index.html`.
-- If someone asks you to take a photo down, do it the same day.
-
-## Takedown contact
-
-`REMOVAL — replace with a working address`, listed in the footer's legal block.
+`images/incoming/_commons/` holds the downloaded source files at 1280–1920 px on the long edge.
+`images/incoming/_archive-adam-ramzi/` holds an earlier, unrelated set of photographs of a different
+person — **not for use on this site**.
