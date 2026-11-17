@@ -1,5 +1,5 @@
 /* =========================================================
-   Daniel Joseph Levy — Fan Archive
+   Jonathan Roumie — Fan Archive
    Vanilla JS: nav, reveals, image loading, lightbox, forms.
    ========================================================= */
 (function () {

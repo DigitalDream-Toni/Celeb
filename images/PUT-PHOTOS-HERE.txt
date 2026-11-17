@@ -1,15 +1,32 @@
 THE FOUR IMAGES THIS SITE USES
 ==============================
 
-  hero.jpg       portrait beside the headline     1000 x 1250  (4:5)
-  about.jpg      portrait in the About section    1000 x 1250  (4:5)
-  press-02.jpg   Press frames, left               900 x 900    (1:1)
-  press-03.jpg   Press frames, right              1200 x 800   (3:2)
+  hero.jpg       portrait beside the headline     800 x 1000  (4:5)
+  about.jpg      portrait in the About section    640 x 800   (4:5)
+  press-02.jpg   Press frames, left               800 x 800   (1:1)
+  press-03.jpg   Press frames, right             1000 x 667   (3:2)
 
-All four are crops of photographs by Patrick.suechan, CC BY-SA 4.0, via Wikimedia
-Commons. Attribution lives in ../CREDITS.md and in the footer of the page — keep it
-there; the licence requires it.
+These four were cropped from the uploads in pic/ :
 
-To replace a photograph, drop the new file in ../images/incoming/ and it will be cropped
-to the matching shape. Rendering is at up to ~700 CSS px wide, so anything below
-1200 px on the long edge will look soft on high-DPI screens.
+  hero.jpg       pic/OIP.webp            Roumie in The Chosen robe, black background
+  about.jpg      pic/download (1).webp   Smiling portrait, grey jacket
+  press-02.jpg   pic/OIF.webp            Television interview
+  press-03.jpg   pic/download.webp       Leather jacket, monument behind
+
+PROVENANCE IS NOT ESTABLISHED.
+
+The uploads are third-party web images of unknown origin, supplied for this fan archive.
+No licence is claimed on the page and none should be claimed in the footer. If the site
+goes public, either get permission for these four or swap in free-licensed photographs
+(Wikimedia Commons has several of Roumie under CC BY-SA) and credit them properly.
+
+They are also low resolution — the largest source is 473 px on the long edge — so they
+have been upscaled to their display size and look soft next to text at large widths.
+If you replace them, prefer sources of 1200 px or more on the long edge.
+
+To swap a photograph: drop the new file in pic/, crop it to the matching shape above,
+update the alt text and the About caption, and change the ?v= number on the <img> tags
+so browsers fetch the new file instead of a cached copy.
+
+Format: JPEG or PNG. HEIC from an iPhone needs converting first (Photos > Export, or
+`heif-convert`), since browsers will not display it. WebP works in every current browser.

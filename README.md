@@ -1,8 +1,8 @@
-# Daniel Joseph Levy — Fan Archive
+# Jonathan Roumie — Fan Archive
 
-An independent, non-commercial fan site for **Daniel Joseph Levy** (b. 9 August 1983, Toronto) —
-the actor, writer, director and producer known for *Schitt's Creek*, *Good Grief* and
-*The Big Brunch*.
+An independent, non-commercial fan site for **Jonathan Roumie** (b. 1 July 1974, New York City) —
+the actor who has played Jesus of Nazareth in *The Chosen* since the 2017 pilot, and Lonnie Frisbee
+in *Jesus Revolution*.
 
 Plain **HTML + CSS + JavaScript**. No framework, no build step, no dependencies.
 
@@ -26,9 +26,9 @@ relative asset paths behave better over HTTP.
 index.html              the whole page
 assets/css/styles.css   design system + all layout
 assets/js/main.js       nav, scroll reveals, lightbox, form validation
-images/                 the four images the page actually uses
+images/                 the four photographs the page uses (all of Roumie)
 CREDITS.md              per-image attribution and licence
-images/incoming/        working folder: Commons sources, archived material
+images/pic/             the nine uploaded source images the four site photos were cropped from
 ```
 
 ### Sections (and their anchor ids)
@@ -55,25 +55,27 @@ images/incoming/        working folder: Commons sources, archived material
 
 ## Photography
 
-Every image is a press frame from **Wikimedia Commons**, free-licensed and credited on the page:
+All four photographs are of **Jonathan Roumie**, cropped from the nine uploads in `images/pic/`:
 
-| File | Frame | Photographer | Licence |
+| File | Source upload | Frame | Output |
 |---|---|---|---|
-| `hero.jpg` | Solo portrait, TIFF 2025 | Patrick.suechan | CC BY-SA 4.0 |
-| `about.jpg` | Three-quarter portrait, TIFF 2025 | Patrick.suechan | CC BY-SA 4.0 |
-| `press-02.jpg` | With Sarah McLachlan, TIFF 2025 | Patrick.suechan | CC BY-SA 4.0 |
-| `press-03.jpg` | Producers' row, TIFF 2025 | Patrick.suechan | CC BY-SA 4.0 |
+| `hero.jpg` | `OIP.webp` | Roumie in the robe of *The Chosen*, black background | 800 × 1000 |
+| `about.jpg` | `download (1).webp` | Smiling portrait, grey jacket | 640 × 800 |
+| `press-02.jpg` | `OIF.webp` | Seated television interview | 800 × 800 |
+| `press-03.jpg` | `download.webp` | Leather jacket, bronze monument behind | 1000 × 667 |
 
-Full attribution, source URLs and the list of modifications are in **`CREDITS.md`**. The crops are
-adaptations, so they carry the same **CC BY-SA 4.0** licence — that credit line in the footer must
-stay on the page. Original uploads are kept in `images/incoming/_commons/`.
+**Provenance is not established.** These are third-party web images of unknown origin, so the page
+claims no licence, credits no photographer and asserts no ownership — the footer says so plainly.
+Before the site goes public, either clear permission for these four or replace them with
+free-licensed photographs (Wikimedia Commons has several of Roumie under CC BY-SA) and credit them
+properly. Details and the unused uploads are in `CREDITS.md`.
 
-There are only a handful of free-licensed photographs of him, which is why the page leans on
-typography and a nine-card work grid rather than a large gallery.
+They are also thumbnails — 180–473 px on the long edge — upscaled with sharpening to their display
+size, so they read soft next to the type. Anything of 1200 px or more would be a straight improvement.
 
-**Do not add photographs of anyone else**, and do not reuse the old Adam Ramzi frames still sitting
-in `images/incoming/_archive-adam-ramzi/` — they are a different person and a different
-photographer's shoot.
+If you swap a photograph, update the `alt` text, the About caption, the press-frame credit line and
+the footer paragraph together, and bump the `?v=` number on the `<img>` tags so browsers drop the
+cached copy.
 
 ---
 
@@ -81,11 +83,17 @@ photographer's shoot.
 
 Real, and linked on the page:
 
-- Representation: **CAA** (he signed with them in March 2025 — Deadline).
-- Speaking/appearance enquiries: **CAA Speakers**, `speakers@caa.com`, via
-  `caa.com/caaspeakers/daniel-levy/`.
-- Production banner: **Not A Real Production Company** (founded 2022).
-- Social: `@instadanjlevy` (Instagram), `@danjlevy` (X, TikTok), IMDb `nm2391794`.
+- Film & TV: **UTA**.
+- Press and personal appearances: **Carmel Communications**. Voice-over: **Atlas Talent Agency**.
+  Commercials: **Commercial Talent Agency**. All published on
+  `jonathanroumie.com/contact`.
+- Social: `@jonathanroumieofficial` (Instagram, Threads), `JonathanRoumieOfficial` (Facebook),
+  `@JonathanRoumie` (X), `@jonathanroumie` (TikTok), `@jonathanroumie_official` (YouTube). IMDb
+  `nm0745751`.
+- There is **no official Telegram** — he says so himself, in his bio and in posts. The fan-mail card
+  says that plainly instead of linking a fake handle.
+- There is **no public fan-mail address and no fan club**; he has warned that paid "fan clubs" are
+  scams.
 
 Not real yet — replace before publishing:
 
@@ -94,32 +102,33 @@ Not real yet — replace before publishing:
   `CONFIG.formEndpoint` / `CONFIG.newsletterEndpoint` at a real handler in `assets/js/main.js`, or
   delete the forms. The page says so in the footer, so keep that line accurate if you wire them up.
 
-There is no public fan-mail address and no agency that forwards letters; the page says that plainly
-rather than inventing one.
-
 ---
 
 ## Facts and where they came from
 
-- Born 9 Aug 1983, Toronto; son of Eugene Levy and Deborah Divine; sister Sarah Levy — Wikipedia /
-  Canadian Encyclopedia.
-- MTV Canada from 2006 (*MTV Live*, *The After Show*) — Canadian Encyclopedia.
-- *Schitt's Creek* 2015–2020, co-created with Eugene Levy; final season took nine Primetime Emmys,
-  four of them to Levy in one night (acting, writing, directing, producing) — CBC, Television Academy.
-- *The Big Brunch* (Max, 2022) — created, hosted, judged.
-- *Good Grief* — wrote, directed, produced, starred; limited release 29 Dec 2023, Netflix 5 Jan 2024.
-- Member of the Order of Canada, June 2023 — Governor General's appointments list.
-- CAA signing, March 2025 — Deadline. First-look TV deal with Netflix, 2026.
+- Born 1 July 1974, New York City; Irish mother, Egyptian father of Syrian/Lebanese descent;
+  baptised Greek Orthodox, confirmed Catholic after the family moved to Long Island — his own
+  interviews (National Catholic Register, Catholic News Agency).
+- BFA in filmmaking, School of Visual Arts; production assistant and location scout before acting.
+- First acting job: voices on MTV's *Celebrity Deathmatch*, 2000–2002 — his own account, IMDb credits.
+- Jesus in Dallas Jenkins's short *The Two Thieves* (2014); *The Chosen* pilot *The Shepherd*,
+  24 December 2017; Season 1 April 2019; Season 6 on Prime Video, 15 November 2026; Season 7 filmed,
+  opening as a feature 31 March 2028 — press.thechosen.tv and the season announcements.
+- *Jesus Revolution* (2023) as Lonnie Frisbee; *Jonathan & Jesus* (2024) host/EP; *The Chosen
+  Adventures* and *In the Wild* (2025); *Night at the Museum: Kahmunrah Rises Again* (2022);
+  *Chicago Med* (2020); *Heart of a Servant* (2024) — his résumé and IMDb.
+- Movieguide Grace Prize, 2020, for *The Chosen* "I Am He"; honorary Doctorate of Fine Arts,
+  Catholic University of America, 2024 (and its 2024 commencement speaker).
 
 If a date or role changes, update the matching `work__card` in `index.html` and keep `work__meta`
-to platform + form (series/feature).
+to platform + form (series/feature/documentary).
 
 ---
 
 ## Known limits
 
-- Four photographs, one photographer, one event (plus two crops of a single moment). The page is
-  built to look intentional at that scale; adding more frames means reworking `#press`.
+- The photography step is unfinished, by request: the images are placeholders and the page says so
+  in three places.
 - Screenshots of the local preview render at roughly 1.35× and get cropped, so layout was verified
   by DOM measurement as well as by eye.
 - No analytics, no cookies, no tracking. Nothing is stored client-side.
