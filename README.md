@@ -55,10 +55,31 @@ images/pic/             the nine uploaded source images the four site photos wer
 
 ## Photography
 
-All four photographs are of **Jonathan Roumie**, cropped from the nine uploads in `images/pic/`:
+All four photographs are of **Jonathan Roumie**, taken from Wikimedia Commons under free licences and
+credited on the page and in `CREDITS.md`:
 
-| File | Source upload | Frame | Output |
-|---|---|---|---|
+| File | Frame | Rights holder | Licence | Output |
+|---|---|---|---|---|
+| `hero.jpg` | Jesus with fishing nets on the Sea of Galilee | The Chosen press photos | CC BY-SA 4.0 | 1000 × 1250 |
+| `about.jpg` | Tuxedo, Hollywood Prayer Network gala | LeRoyMobley | CC BY-SA 4.0 | 720 × 900 |
+| `press-02.jpg` | Jesus at the banquet table | The Chosen press photos | CC BY-SA 4.0 | 900 × 900 |
+| `press-03.jpg` | Jesus and the leper | The Chosen press photos | CC BY-SA 4.0 | 1200 × 800 |
+
+Sources were 1280–1920 px on the long edge and are only ever scaled **down**, so the images stay
+sharp at their display size, including on high-DPI screens. The crops are adaptations, so they carry
+the same CC BY-SA 4.0 licence as the originals — the footer credit paragraph and `CREDITS.md` must
+stay on the page.
+
+The nine thumbnails in `images/pic/` are no longer used. They were 180–473 px and looked soft when
+scaled up; no higher-resolution free-licensed version of those particular pictures exists, because
+they are rights-reserved promo, broadcast and magazine frames. Originals of the four in use are in
+`images/hd/`.
+
+If you swap a photograph, update the `alt` text, the About caption, the press-frame credit line and
+the footer paragraph together, and bump the `?v=` number on the `<img>` tags so browsers drop the
+cached copy.
+
+---|---|---|---|
 | `hero.jpg` | `OIP.webp` | Roumie in the robe of *The Chosen*, black background | 800 × 1000 |
 | `about.jpg` | `download (1).webp` | Smiling portrait, grey jacket | 640 × 800 |
 | `press-02.jpg` | `OIF.webp` | Seated television interview | 800 × 800 |

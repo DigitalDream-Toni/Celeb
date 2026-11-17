@@ -1,32 +1,39 @@
 THE FOUR IMAGES THIS SITE USES
 ==============================
 
-  hero.jpg       portrait beside the headline     800 x 1000  (4:5)
-  about.jpg      portrait in the About section    640 x 800   (4:5)
-  press-02.jpg   Press frames, left               800 x 800   (1:1)
-  press-03.jpg   Press frames, right             1000 x 667   (3:2)
+  hero.jpg       portrait beside the headline     1000 x 1250  (4:5)
+  about.jpg      portrait in the About section     720 x 900   (4:5)
+  press-02.jpg   Press frames, left                900 x 900    (1:1)
+  press-03.jpg   Press frames, right              1200 x 800    (3:2)
 
-These four were cropped from the uploads in pic/ :
+All four are photographs of Jonathan Roumie, cropped DOWN from 1280–1920 px Wikimedia
+Commons originals, so they are sharp at their display size.
 
-  hero.jpg       pic/OIP.webp            Roumie in The Chosen robe, black background
-  about.jpg      pic/download (1).webp   Smiling portrait, grey jacket
-  press-02.jpg   pic/OIF.webp            Television interview
-  press-03.jpg   pic/download.webp       Leather jacket, monument behind
+  hero.jpg       The Chosen, Sea of Galilee still   The Chosen press   CC BY-SA 4.0
+  about.jpg      Hollywood Prayer Network gala     LeRoy Mobley       CC BY-SA 4.0
+  press-02.jpg   The Chosen, banquet still         The Chosen press   CC BY-SA 4.0
+  press-03.jpg   The Chosen, the leper still       The Chosen press   CC BY-SA 4.0
 
-PROVENANCE IS NOT ESTABLISHED.
+Attribution lives in ../CREDITS.md, beside the press frames and in the footer. The licences
+require it — keep those lines if you reuse the images.
 
-The uploads are third-party web images of unknown origin, supplied for this fan archive.
-No licence is claimed on the page and none should be claimed in the footer. If the site
-goes public, either get permission for these four or swap in free-licensed photographs
-(Wikimedia Commons has several of Roumie under CC BY-SA) and credit them properly.
+hd/ holds the full-resolution sources these were cropped from. The originals are also on
+Wikimedia Commons, listed in ../CREDITS.md.
 
-They are also low resolution — the largest source is 473 px on the long edge — so they
-have been upscaled to their display size and look soft next to text at large widths.
-If you replace them, prefer sources of 1200 px or more on the long edge.
+pic/ holds nine web thumbnails uploaded earlier. They are NOT used: at 180–473 px they
+looked soft once scaled, and no higher-resolution free-licensed version of those
+particular pictures exists. Kept for reference only.
 
-To swap a photograph: drop the new file in pic/, crop it to the matching shape above,
-update the alt text and the About caption, and change the ?v= number on the <img> tags
-so browsers fetch the new file instead of a cached copy.
+TO SWAP A PHOTOGRAPH
+--------------------
+1. Get a source at least 1200 px on the long edge, ideally more.
+2. Crop to the shape in the table above, scale down (never up), save as progressive JPEG.
+3. Update the alt text, the About caption, the press-frame credit line and the footer
+   credit paragraph together.
+4. Bump the ?v= number on the <img> tags so browsers fetch the new file.
 
-Format: JPEG or PNG. HEIC from an iPhone needs converting first (Photos > Export, or
-`heif-convert`), since browsers will not display it. WebP works in every current browser.
+Only use images you may publish: your own, free-licensed ones (Commons, Flickr CC) with the
+photographer and licence recorded, or press frames you have written permission for.
+
+Format: JPEG or PNG. HEIC from an iPhone must be converted first. WebP works in every
+current browser.
